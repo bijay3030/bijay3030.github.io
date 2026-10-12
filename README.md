@@ -48,7 +48,7 @@ This repo is the GitHub Pages user site, served at https://bijay3030.github.io. 
 
 ## Design notes
 
-- Type: Newsreader (variable serif with optical sizes) for reading; Geist Mono for labels and metadata.
-- Color: warm paper `#f4f0e6`, ink `#1d1b16`, and one accent, sindoor red `#b23a24`. The accent only appears where something changes or ends: the end of a workflow, a result, the live dot.
-- Layout: a 38rem reading column. On wide screens, section numbers (§ 01) sit in the left margin, like notes on a manuscript.
-- Motion: one staggered fade-in when the page loads, and smooth open/close on sections. Both turn off when the visitor has reduced motion enabled.
+- A plain personal homepage, the way engineers have long built their own sites: white page (dark when the visitor's system is dark), one readable font, classic blue underlined links, plain headings.
+- Type: Atkinson Hyperlegible Next, a humanist sans designed for legibility. Code uses the system monospace.
+- No decoration for its own sake: no labels, no section numbers, no animation, no cards. Case studies open with the browser's own "Read the case study" toggle.
+- Copy avoids long dashes; commas, colons, and periods do the work.

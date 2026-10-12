@@ -5,7 +5,7 @@ export const profile = {
   role: 'Senior software engineer',
   jobTitle: 'Senior Software Engineer',
   // Title, stack, and years: what a recruiter scans for first.
-  tagline: 'Senior Rails & React engineer · Kathmandu, Nepal',
+  tagline: 'Senior Rails & React engineer in Kathmandu, Nepal.',
   employer: { name: 'Truemark', url: 'https://www.truemark.dev/' },
   location: 'Kathmandu, Nepal',
   timezone: 'Asia/Kathmandu',
@@ -14,7 +14,7 @@ export const profile = {
   resume: 'resume.pdf', // relative to the site base
   // One sentence: what I build now (AI products, engineering workflows), then the niche I'm known for.
   statement:
-    'Building AI-powered products and smarter engineering workflows — and turning operations run on spreadsheets into software teams rely on.',
+    'Building AI-powered products and smarter engineering workflows, and turning operations run on spreadsheets into software teams rely on.',
   availability: 'Open to senior full-time remote roles',
   overlap: '4+ hours with US Eastern · full EU workday',
   links: [
@@ -25,7 +25,7 @@ export const profile = {
 
 export const about = [
   'I joined Truemark in 2021 as an associate engineer and was leading client applications as a senior 16 months later. Most of that work serves US healthcare clients, where one lost file or wrong price breaks trust.',
-  'I start by mapping how the work actually moves — who touches what, and where it breaks — then model it as explicit states and automate every step between.',
+  'I start by mapping how the work actually moves: who touches what, and where it breaks. Then I model it as explicit states and automate every step between.',
 ];
 
 // How a feature goes from request to shipped, with AI agents doing the implementation.
@@ -33,7 +33,7 @@ export const aiWorkflow = [
   { step: 'Understand', detail: 'the requirement, and the problem behind it' },
   { step: 'Research', detail: 'how others have built it' },
   { step: 'Plan with AI', detail: 'frontier models draft the plan in plan mode' },
-  { step: 'Grill the plan', detail: 'Q&A rounds — the model asks every question before any code' },
+  { step: 'Grill the plan', detail: 'Q&A rounds where the model asks every question before any code' },
   { step: 'Slice', detail: 'the plan becomes small, verifiable tasks' },
   { step: 'Agents implement', detail: 'one task at a time' },
   { step: 'QA', detail: 'I verify the work myself' },
@@ -89,7 +89,7 @@ export const projects: Project[] = [
       'Live dashboards and role-based access',
     ],
     problem:
-      'Every file, in every language, needed its own vendor, deadline, and delivery. Coordinating that by hand was slow, risked lost files, and left no audit trail — for clients who require one.',
+      'Every file, in every language, needed its own vendor, deadline, and delivery. Coordinating that by hand was slow, risked lost files, and left no audit trail for clients who require one.',
     architecture: {
       tiers: [
         {
@@ -112,7 +112,7 @@ export const projects: Project[] = [
         },
         {
           label: 'Background · Sidekiq',
-          via: 'enqueue — request returns immediately',
+          via: 'enqueue; the request returns immediately',
           nodes: [
             { name: 'Validate files', note: 'bad or missing files caught at upload' },
             { name: 'Split by language pair', note: 'one task per file per language' },
@@ -133,7 +133,7 @@ export const projects: Project[] = [
     },
     decisions: [
       { title: 'Background jobs for anything slow', body: 'Uploads return instantly; failed validation or routing retries safely.' },
-      { title: 'Authorization as policies', body: 'One Pundit policy per model decides who can do what — essential when clients, vendors, and staff share one system.' },
+      { title: 'Authorization as policies', body: 'One Pundit policy per model decides who can do what. Essential when clients, vendors, and staff share one system.' },
       { title: 'Push, don’t poll', body: 'Dashboards update the moment status changes, with no polling load.' },
     ],
     results: ['Every hand-off automated.', 'Audit-ready history for every job.', 'More volume without more coordinators.'],
@@ -207,7 +207,7 @@ export const projects: Project[] = [
     id: 'alistengine',
     name: 'aListEngine',
     domain: 'AI cataloging',
-    summary: 'Photos in, auction-ready listings out — for auctioneers and resellers.',
+    summary: 'Photos in, auction-ready listings out, for auctioneers and resellers.',
     before: 'Hours of writing per batch',
     after: 'Minutes, reviewed by a person',
     scale: ['live product', 'hundreds of photos per batch', '10 export platforms', 'iOS + Android'],
@@ -219,7 +219,7 @@ export const projects: Project[] = [
       'Shopify, AuctionFlex, and LiveAuctioneers exports',
     ],
     problem:
-      'Every one-off item — antiques, collectibles, equipment — needs a title, description, condition notes, and price, formatted differently for each platform. By hand, quality depended on the writer.',
+      'Every one-off item (antiques, collectibles, equipment) needs a title, description, condition notes, and price, formatted differently for each platform. By hand, quality depended on the writer.',
     architecture: {
       tiers: [
         {
@@ -292,8 +292,8 @@ export const experience = [
     title: 'Senior Software Engineer',
     company: 'Truemark',
     href: 'https://www.truemark.dev/',
-    period: 'Aug 2022 — Present',
-    summary: 'Own each application end to end — data model to deploy pipeline.',
+    period: 'Aug 2022 to now',
+    summary: 'Own each application end to end, from data model to deploy pipeline.',
     // The headline results, shown as a grid; each appears nowhere else.
     metrics: [
       { value: '6+', label: 'client Rails applications led' },
@@ -312,12 +312,12 @@ export const experience = [
     title: 'Associate Software Engineer',
     company: 'Truemark',
     href: 'https://www.truemark.dev/',
-    period: 'Apr 2021 — Aug 2022',
+    period: 'Apr 2021 to Aug 2022',
     summary: 'Backend foundations for high-traffic client apps.',
     metrics: [],
     points: [
       'Shipped Rails APIs and services with consistent sub-200ms responses.',
-      'Integrated 10+ third-party services — payments, analytics, communication.',
+      'Integrated 10+ third-party services: payments, analytics, communication.',
       'Improved React frontends: client-reported UI issues down 25%.',
       'Helped the team adopt Scrum; kept technical documentation current.',
     ],
@@ -325,7 +325,7 @@ export const experience = [
 ];
 
 export const education = [
-  { degree: 'B.Tech, Computer Science', school: 'Maharshi Dayanand University', years: '2016 — 2020' },
+  { degree: 'B.Tech, Computer Science', school: 'Maharshi Dayanand University', years: '2016 to 2020' },
 ];
 
 export const skills = [
@@ -375,7 +375,7 @@ export const testimonials: {
   {
     // DRAFT written for Ananta to review — not his words until he approves them.
     quote:
-      'Bijay built Helios and Quoting with our team. He took workflows our project managers ran by hand and turned them into systems they depend on — and he understood our business before he wrote a line of code.',
+      'Bijay built Helios and Quoting with our team. He took workflows our project managers ran by hand and turned them into systems they depend on. And he understood our business before he wrote a line of code.',
     name: 'Ananta Raj Lamichhane',
     title: 'Senior Software Engineer, Language Scientific',
     relationship: 'Client on Helios and Quoting',

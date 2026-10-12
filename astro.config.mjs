@@ -10,7 +10,7 @@ export default defineConfig({
     sitemap({ filter: (page) => page.endsWith('/'), lastmod: new Date() }),
   ],
   markdown: {
-    shikiConfig: { theme: 'min-light' },
+    shikiConfig: { themes: { light: 'min-light', dark: 'min-dark' } },
   },
   // Pages from the previous Gatsby site, pointed at where that content lives now.
   redirects: {

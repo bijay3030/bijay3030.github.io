@@ -16,54 +16,34 @@ const date = post.data.date.toLocaleDateString('en-US', { day: 'numeric', month:
 ---
 
 <Base title={`${post.data.title} — ${profile.name}`} description={post.data.description}>
-  <article class="frame">
-    <div class="margin label"><a href={url('#writing')}>← Index</a></div>
-    <div>
-      <p class="mobile-back label"><a href={url('#writing')}>← {profile.name}</a></p>
-      <header class="reveal" style="--i: 0">
-        <p class="label">
-          {date}{post.data.draft && ' · Draft'}{post.data.tags.length > 0 && ` · ${post.data.tags.join(', ')}`}
-        </p>
-        <h1>{post.data.title}</h1>
-        <p class="dek">{post.data.description}</p>
-      </header>
-      <div class="prose reveal" style="--i: 1">
-        <Content />
-      </div>
+  <article>
+    <p class="small"><a href={url()}>← {profile.name}</a></p>
+    <header>
+      <h1>{post.data.title}</h1>
+      <p class="small muted">
+        {date}{post.data.draft && ' · Draft'}{post.data.tags.length > 0 && ` · ${post.data.tags.join(', ')}`}
+      </p>
+      <p class="dek">{post.data.description}</p>
+    </header>
+    <div class="prose">
+      <Content />
     </div>
   </article>
 </Base>
 
 <style>
-  .margin a,
-  .mobile-back a {
-    text-decoration: none;
-  }
-  .mobile-back {
-    display: none;
-  }
   header {
-    margin-bottom: 2.5rem;
-    padding-bottom: 1.5rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
     border-bottom: 1px solid var(--rule);
   }
   h1 {
-    margin: 0.75rem 0 0.75rem;
-    font-size: clamp(2rem, 6vw, 2.75rem);
-    line-height: 1.1;
-    font-weight: 400;
-    letter-spacing: -0.02em;
+    font-size: 1.9rem;
+    margin: 1rem 0 0.4rem;
   }
   .dek {
+    font-size: 1.15rem;
+    color: var(--soft);
     margin: 0;
-    font-size: 1.25rem;
-    font-style: italic;
-    color: var(--ink-soft);
-  }
-  @media (max-width: 52rem) {
-    .mobile-back {
-      display: block;
-      margin: 0 0 2rem;
-    }
   }
 </style>
