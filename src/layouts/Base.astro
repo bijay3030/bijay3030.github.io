@@ -25,7 +25,8 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
     <link rel="icon" href={url('favicon.svg')} type="image/svg+xml" />
-    <meta name="theme-color" content="#f4f0e6" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#161616" media="(prefers-color-scheme: dark)" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
@@ -44,13 +45,14 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     </div>
 
     <script>
-      // Following a link to a collapsed section (e.g. #work or #helios) opens it first.
+      // Following a link to a project (e.g. #helios) opens its case study first.
       function openTarget() {
         const id = decodeURIComponent(location.hash.slice(1));
         const el = id && document.getElementById(id);
         if (!el) return;
         for (let d = el.closest('details'); d; d = d.parentElement?.closest('details') ?? null) d.open = true;
         if (el instanceof HTMLDetailsElement) el.open = true;
+        el.querySelector(':scope > details')?.setAttribute('open', '');
         requestAnimationFrame(() => el.scrollIntoView());
       }
       window.addEventListener('hashchange', openTarget);

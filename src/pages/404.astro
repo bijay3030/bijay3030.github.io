@@ -1,23 +1,11 @@
 ---
-import { url } from '../utils/url';
 import Base from '../layouts/Base.astro';
+import { url } from '../utils/url';
 ---
 
 <Base title="Not found — Bijay Subedi">
-  <main class="frame">
-    <div class="margin label">§ 404</div>
-    <div class="reveal">
-      <h1>Nothing here.</h1>
-      <p>The page moved or never existed. <a href={url()}>Back to the beginning →</a></p>
-    </div>
+  <main>
+    <h1>Page not found</h1>
+    <p>This page moved or never existed. <a href={url()}>Go to the home page</a>.</p>
   </main>
 </Base>
-
-<style>
-  h1 {
-    margin: 0 0 1rem;
-    font-size: 2.5rem;
-    font-weight: 400;
-    font-style: italic;
-  }
-</style>
